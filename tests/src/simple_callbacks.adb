@@ -1,3 +1,6 @@
+-- This test shows how to add callbacks to a window and handle events
+-- in that way (mouse and key events).
+
 with Glfw3.Main;
 with Glfw3.Windows;
 with Glfw3.Events;
@@ -46,7 +49,7 @@ begin
 
    Glfw3.Main.Init;
 
-   Main_Window.Create (640, 480, "Simple_Callbacks.adb");
+   Main_Window.Create (640, 480, "simple_callbacks.adb");
    Main_Window.Make_Context_Current;
 
    Main_Window.Set_Mouse_Button_Callback (On_Mouse_Button'Unrestricted_Access);

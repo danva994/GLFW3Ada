@@ -1,3 +1,5 @@
+-- This test shows how to create a "windowed fullscreen" window.
+
 with Glfw3.Main;
 with Glfw3.Hints;
 with Glfw3.Windows;
@@ -8,11 +10,14 @@ with Glfw3.Input.Keys;
 with Ada.Text_IO;
 with Ada.Exceptions;
 
+with GL; use GL;
+
 procedure Windowed_Fullscreen is
 
    use type Glfw3.Input.Action;
    use type Glfw3.Input.Keys.Key;
 
+   -- Press Escape to exit fullscreen mode.
    procedure On_Key
      (Source   : not null access Glfw3.Windows.Window'Class;
       Key      : Glfw3.Input.Keys.Key;
@@ -52,6 +57,8 @@ begin
 
    while not Main_Window.Should_Close loop
       Glfw3.Events.Wait_Events;
+      glClearColor (0.0, 0.0, 0.0, 1.0);
+      glClear (GL_COLOR_BUFFER_BIT);
       Main_Window.Swap_Buffers;
    end loop;
 

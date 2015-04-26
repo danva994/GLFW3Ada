@@ -1,3 +1,5 @@
+-- Shows how to create a "hello world" window.
+
 with Glfw3.Main;
 with Glfw3.Windows;
 with Glfw3.Events;
@@ -12,7 +14,7 @@ begin
 
    Glfw3.Main.Init;
 
-   Main_Window.Create (640, 480, "Simple_Window.adb");
+   Main_Window.Create (640, 480, "simple_window.adb");
    Main_Window.Make_Context_Current;
 
    while not Main_Window.Should_Close loop
