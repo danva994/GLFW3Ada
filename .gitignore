@@ -45,8 +45,10 @@ Temporary Items
 ########################################################################
 # My ignores :)
 
+gnatinspect.db
 *.npp
 obj/
 lib/
 tests/obj/
 tests/exec/
+tests/gnatinspect.db
